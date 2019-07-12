@@ -1,4 +1,4 @@
-## WIP
+## nanode 
 ## for details, refer to https://www.linode.com/docs/applications/configuration-management/how-to-build-your-infrastructure-using-terraform-and-linode/ 
 
 provider "linode" {
