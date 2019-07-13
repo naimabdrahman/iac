@@ -1,0 +1,15 @@
+## terraform cheatsheet
+
+terraform init
+
+
+terraform plan
+
+
+terrafom apply -auto-approve # auto approve
+
+
+terraform plan -destroy # to destroy
+
+
+terraform plan -refresh   
