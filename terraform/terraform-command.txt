@@ -6,10 +6,13 @@ terraform init
 terraform plan
 
 
-terrafom apply -auto-approve # auto approve
+terrafom apply -auto-approve 	# auto approve
 
 
-terraform plan -destroy # to destroy
+terraform plan -destroy 	# plan to destroy
+
+
+terraform destroy 		# to destroy 
 
 
 terraform plan -refresh   
