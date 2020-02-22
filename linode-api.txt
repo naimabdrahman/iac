@@ -1,0 +1,29 @@
+## BASIC API for linode ##
+
+# query with authorization   
+curl -X GET https://api.linode.com/v4/linode/instances -H "Authorization: Bearer $TOKEN" -H "Content-type: application/json" | jq
+curl -X GET https://api.linode.com/v4/linode/instances -H "Authorization: Bearer $TOKEN" -H "Content-type: application/json" | jq
+curl -X GET https://api.linode.com/v4/linode/instances/data/ -H "Authorization: Bearer $TOKEN" -H "Content-type: application/json" | jq
+curl -X GET https://api.linode.com/v4/linode/instances/ipv4 -H "Authorization: Bearer $TOKEN" -H "Content-type: application/json" | jq
+
+## post
+curl -X POST https://api.linode.com/v4/linode/instances -H "Authorization: Bearer $TOKEN" -H "Content-type: application/json" -d '{"type": "g6-nanode-1", "region": "ap-south", "image": "linode/centos7", "root_pass": "Kasihantambro123@", "label": "khb"}'
+
+
+
+
+## query  
+curl https://api.linode.com/v4/images/ | jq
+curl https://api.linode.com/v4/linode/types/ | jq
+curl https://api.linode.com/v4/regions | jq
+
+## filter
+curl https://api.linode.com/v4/images/ -H 'X-Filter: { "vendor": "Debian", "deprecated": false}' | jq
+curl -X GET https://api.linode.com/v4/linode/instances -H "Authorization: Bearer $TOKEN" -H "Content-type: application/json" -H 'X-Filter: { "label": "test" }' | jq
+
+## delete
+curl -H "Authorization: Bearer $TOKEN" -X DELETE https://api.linode.com/v4/linode/instances/19502192
+curl -H "Authorization: Bearer $TOKEN" -X DELETE https://api.linode.com/v4/linode/instances/<instance ID>
+
+
+
