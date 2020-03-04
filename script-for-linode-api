@@ -1,0 +1,9 @@
+script to create multiple linode hosts:..
+
+ for XXX in xtest1 xtest2 xtest3 xtest4 xtest5 xtest6 xtest7; do echo -e "curl -X POST https://api.linode.com/v4/linode/instances -H \"Authorization: Bearer $TOKEN\" -H \"Content-type: application/json\" -d '{
+ \"type\": \"g6-nanode-1\",
+ \"region\": \"ap-south\",
+ \"image\": \"linode/centos7\",
+ \"root_pass\": \"<INSERT PASSWORD>\",
+ \"label\": \"$XXX\"
+ }'"; done
