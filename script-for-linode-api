@@ -37,5 +37,7 @@ for XXX in `cat list`
 do echo -e "curl -X GET https://api.linode.com/v4/linode/instances\
  -H \"Authorization: Bearer $TOKEN\"\
  -H \"Content-type: application/json\"\
- -H 'X-Filter: { \"label\": "$XXX" }'\"
- | jq "; done
+ -H 'X-Filter: { \"label\": \"$XXX\" }'| jq | grep -a1 ipv4 "; done
+
+
+
