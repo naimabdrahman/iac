@@ -1,7 +1,9 @@
-script to create multiple linode hosts:..
+script generator to create/get info/delete  multiple linode hosts:..
 
 
 =====================================================================================
+## create multiple VM
+
 
 TOKEN=`cat lalala`
 for XXX in xtest1 xtest2 xtest3 xtest4 xtest5 xtest6
@@ -14,6 +16,7 @@ do echo -e "curl -X POST https://api.linode.com/v4/linode/instances -H \"Authori
  }'"; done
 
 =====================================================================================
+## create multiple VM
 
 TOKEN=`cat lalala`
 for XXX in `cat list`
@@ -24,3 +27,15 @@ do echo -e "curl -X POST https://api.linode.com/v4/linode/instances -H \"Authori
  \"root_pass\": \"<INSERT PASSWORD>\",
  \"label\": \"$XXX\"
  }'"; done
+
+
+=====================================================================================
+## Get IP 
+
+TOKEN=`cat lalala`
+for XXX in `cat list`
+do echo -e "curl -X GET https://api.linode.com/v4/linode/instances\
+ -H \"Authorization: Bearer $TOKEN\"\
+ -H \"Content-type: application/json\"\
+ -H 'X-Filter: { \"label\": "$XXX" }'\"
+ | jq "; done
