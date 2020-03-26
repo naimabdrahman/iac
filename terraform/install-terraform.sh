@@ -6,9 +6,9 @@ yum -y update
 yum -y  install wget unzip
 
 cd; mkdir /root/temp
-wget https://releases.hashicorp.com/terraform/0.11.9/terraform_0.11.9_linux_amd64.zip -P /root/temp
+wget https://releases.hashicorp.com/terraform/0.12.24/terraform_0.12.24_linux_amd64.zip -P /root/temp	
 
-cd /root/temp
-unzip ./terraform_0.11.9_linux_amd64.zip -d /usr/local/bin/
+unzip /root/temp/terraform_0.12.24_linux_amd64.zip -d /usr/local/bin/
 
-cd
+## validate
+terraform --version
