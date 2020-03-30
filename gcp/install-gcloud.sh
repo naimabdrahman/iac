@@ -1,4 +1,7 @@
-# Update YUM with Cloud SDK repo information:
+## Update YUM with Cloud SDK repo information:
+## reference https://cloud.google.com/sdk/docs/quickstart-redhat-centos
+
+
 tee -a /etc/yum.repos.d/google-cloud-sdk.repo << EOL
 [google-cloud-sdk]
 name=Google Cloud SDK
