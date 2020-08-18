@@ -1,0 +1,9 @@
+## reference
+
+curl\
+ -H "X-Vault-Token:XXXXXXXX"\
+ --request GET\
+ http://127.0.0.1:8200/v1/secret/metadata/hello
+ 
+ 
+ 
